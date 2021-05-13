@@ -1,0 +1,33 @@
+echo Setting Up Ubuntu
+
+sudo apt update
+sudo apt install software-properties-common apt-transport-https wget
+
+#####################################
+#      Install Applications         #
+#####################################
+# Chromium
+sudo apt install chromium-browser
+
+# Atom
+wget -q https://packagecloud.io/AtomEditor/atom/gpgkey -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main"
+sudo apt install atom
+
+# VS code
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt install code
+
+# discord
+sudo snap install discord
+
+# draw.io
+sudo apt -y install wget
+wget https://github.com/jgraph/drawio-desktop/releases/download/v12.3.2/draw.io-amd64-12.3.2.deb
+sudo dpkg -i draw.io-amd64-12.3.2.deb
+sudo apt -y -f install
+
+# Set hotkeys
+chmod +x hotkeys
+./hotkeys

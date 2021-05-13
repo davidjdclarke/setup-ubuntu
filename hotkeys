@@ -1,0 +1,4 @@
+python3 bind.py 'Atom' 'atom' '<Ctrl><Alt>A'
+python3 bind.py 'Visual Studio' 'code' '<Ctrl><Alt>V'
+python3 bind.py 'Spotify' 'spotify' '<Shift><Alt>S'
+python3 bind.py 'Settings' 'gnome-control-center' '<Ctrl><Alt>S'
